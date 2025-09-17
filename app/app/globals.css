@@ -1,0 +1,208 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --vermelho-principal: #d00000;
+    --branco-gelo: #f5f5f5;
+    --cinza-escuro: #1e1e1e;
+    --cinza-claro: #e0e0e0;
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222.2 84% 4.9%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96%;
+    --accent-foreground: 222.2 84% 4.9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-gray-200;
+  }
+  body {
+    @apply bg-white text-gray-900;
+  }
+}
+
+/* Estilos customizados para Mineração Itapeva */
+.bg-vermelho-principal {
+  background-color: var(--vermelho-principal);
+}
+
+.bg-branco-gelo {
+  background-color: var(--branco-gelo);
+}
+
+.bg-cinza-escuro {
+  background-color: var(--cinza-escuro);
+}
+
+.bg-cinza-claro {
+  background-color: var(--cinza-claro);
+}
+
+.text-vermelho-principal {
+  color: var(--vermelho-principal);
+}
+
+.text-cinza-escuro {
+  color: var(--cinza-escuro);
+}
+
+.border-vermelho-principal {
+  border-color: var(--vermelho-principal);
+}
+
+/* Animações suaves */
+.animate-fade-in {
+  animation: fade-in 0.6s ease-in-out;
+}
+
+.animate-slide-up {
+  animation: slide-up 0.8s ease-out;
+}
+
+.animate-count-up {
+  animation: count-up 2s ease-out;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes count-up {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Animação pulsante para elementos */
+.animate-pulse-custom {
+  animation: pulse-custom 2s ease-in-out infinite;
+}
+
+@keyframes pulse-custom {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.9;
+  }
+}
+
+/* Efeitos de hover para cards */
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Parallax effect */
+.parallax-bg {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Scroll suave */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Estilo para tabelas */
+.tabela-especificacoes {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.tabela-especificacoes th,
+.tabela-especificacoes td {
+  border: 1px solid var(--cinza-claro);
+  padding: 0.75rem;
+  text-align: left;
+}
+
+.tabela-especificacoes th {
+  background-color: var(--cinza-escuro);
+  color: white;
+  font-weight: 600;
+}
+
+.tabela-especificacoes tr:nth-child(even) {
+  background-color: var(--branco-gelo);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .whatsapp-float {
+    width: 50px;
+    height: 50px;
+    bottom: 15px;
+    right: 15px;
+  }
+}
+
+/* Esconder scrollbar mas manter funcionalidade */
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Gradientes personalizados */
+.gradient-hero {
+  background: linear-gradient(135deg, rgba(30, 30, 30, 0.9) 0%, rgba(208, 0, 0, 0.8) 100%);
+}
+
+.gradient-section {
+  background: linear-gradient(180deg, var(--branco-gelo) 0%, var(--cinza-claro) 100%);
+}

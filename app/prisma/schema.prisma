@@ -1,0 +1,77 @@
+
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+    provider = "prisma-client-js"
+    binaryTargets = ["native", "linux-musl-arm64-openssl-3.0.x"]
+    output = "/home/ubuntu/mineracao_itapeva_site/app/node_modules/.prisma/client"
+}
+
+datasource db {
+    provider = "postgresql"
+    url      = env("DATABASE_URL")
+}
+
+model contatos_formulario {
+  id         String   @id @default(cuid())
+  nome       String
+  email      String
+  telefone   String?
+  empresa    String?
+  mensagem   String
+  criado_em  DateTime @default(now())
+  atualizado_em DateTime @updatedAt
+  
+  @@map("contatos_formulario")
+}
+
+model contatos_whatsapp {
+  id         String   @id @default(cuid())
+  nome       String?
+  telefone   String
+  mensagem   String?
+  criado_em  DateTime @default(now())
+  
+  @@map("contatos_whatsapp")
+}
+
+model noticias {
+  id            String   @id @default(cuid())
+  titulo        String
+  resumo        String
+  conteudo      String
+  imagem_url    String?
+  publicado     Boolean  @default(false)
+  criado_em     DateTime @default(now())
+  atualizado_em DateTime @updatedAt
+  
+  @@map("noticias")
+}
+
+model produtos {
+  id           String @id @default(cuid())
+  nome         String
+  descricao    String
+  categoria    String
+  especificacoes String?
+  imagem_url   String?
+  ativo        Boolean @default(true)
+  criado_em    DateTime @default(now())
+  atualizado_em DateTime @updatedAt
+  
+  @@map("produtos")
+}
+
+model galeria_imagens {
+  id          String @id @default(cuid())
+  titulo      String
+  descricao   String?
+  imagem_url  String
+  categoria   String
+  ordem       Int    @default(0)
+  ativo       Boolean @default(true)
+  criado_em   DateTime @default(now())
+  
+  @@map("galeria_imagens")
+}
