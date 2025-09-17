@@ -1,10 +1,17 @@
 
 import { createClient } from '@supabase/supabase-js'
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!
-const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+// Inicializa o cliente apenas quando for usado, evitando erro no build
+export function getSupabase() {
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
+  const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
 
-export const supabase = createClient(supabaseUrl, supabaseAnonKey)
+  if (!supabaseUrl || !supabaseAnonKey) {
+    throw new Error('Supabase env vars missing (NEXT_PUBLIC_SUPABASE_URL / NEXT_PUBLIC_SUPABASE_ANON_KEY)')
+  }
+
+  return createClient(supabaseUrl, supabaseAnonKey)
+}
 
 // Tipo para a tabela de contatos
 export interface ContatoData {
@@ -21,6 +28,7 @@ export interface ContatoData {
 
 // Função para inserir contato na tabela
 export async function inserirContato(dados: ContatoData) {
+  const supabase = getSupabase()
   const { data, error } = await supabase
     .from('contatos')
     .insert([{
