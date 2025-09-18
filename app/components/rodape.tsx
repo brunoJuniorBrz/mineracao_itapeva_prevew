@@ -1,4 +1,3 @@
-
 'use client'
 
 import { motion } from 'framer-motion'
@@ -38,7 +37,7 @@ export default function Rodape() {
               <p className="text-gray-300 text-lg leading-relaxed">
                 Maior produtora de filito do Brasil, com mais de 65 anos de tradição 
                 e compromisso com a qualidade e sustentabilidade. Produção anual de 
-                350.000 toneladas, atendendo dois grandes segmentos: construção civil 
+                300.000 toneladas, atendendo dois grandes segmentos: construção civil 
                 (MATCON) e nutrição animal (ITAGEO).
               </p>
             </motion.div>
@@ -131,3 +130,4 @@ export default function Rodape() {
     </footer>
   )
 }
+

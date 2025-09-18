@@ -41,11 +41,11 @@ export default function SecaoContato() {
     },
     {
       id: 'itageo',
-      nome: 'ITAGEO',
+      nome: 'ITAGEO / CAULIM',
       categoria: 'Ração Animal',
       icon: Wheat,
       cor: 'bg-green-500',
-      produtos: ['Filito Branco', 'Filito Bege', 'Filito Creme'],
+      produtos: ['Filito Branco', 'Filito Cinza', 'Filito Creme', 'Caulim'],
       segmentos: ['Fábrica de Ração', 'Distribuidor Agropecuário', 'Indústria Química', 'Fertilizantes', 'Outro']
     }
   ]
@@ -449,7 +449,7 @@ export default function SecaoContato() {
               </h4>
               <div className="aspect-[16/9] bg-gray-200 rounded-lg overflow-hidden">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.4!2d-48.8765!3d-23.9876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDU5JzE1LjQiUyA0OMKwNTInMzUuNCJX!5e0!3m2!1spt-BR!2sbr!4v1642123456789!5m2!1spt-BR!2sbr"
+                  src="https://www.google.com/maps?q=Estrada%20Municipal%20Luis%20Jos%C3%A9%20Sguario%2C%20Km%205%2C%20Itapeva%20-%20SP&hl=pt-BR&z=15&output=embed"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}

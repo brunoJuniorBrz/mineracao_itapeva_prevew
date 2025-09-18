@@ -104,7 +104,7 @@ export default function Cabecalho() {
 
           {/* BotÃ£o Menu Mobile */}
           <button
-            className={`md:hidden p-2 rounded-full border transition-colors ${menuAberto || scrolled ? 'bg-white shadow-sm border-white/70' : 'bg-white/70 border-white/60'}`}
+            className={`md:hidden ml-auto p-2 rounded-full border transition-colors ${menuAberto || scrolled ? 'bg-white shadow-sm border-white/70' : 'bg-white/70 border-white/60'}`}
             onClick={() => setMenuAberto(!menuAberto)}
           >
             {menuAberto ? (

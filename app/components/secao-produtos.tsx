@@ -1,4 +1,3 @@
-
 'use client'
 
 import { motion } from 'framer-motion'
@@ -59,7 +58,7 @@ export default function SecaoProdutos() {
       caracteristicas: [
         'Teor de Ar: 8%',
         'Densidade: 1,96%',
-        'Retenção de Água: 87%',
+        'Retenção de água: 87%',
         'pH neutro',
         'Substitui Cal Hidratada',
         'Melhora trabalhabilidade'
@@ -67,7 +66,7 @@ export default function SecaoProdutos() {
     },
     {
       id: 'itageo',
-      nome: 'ITAGEO',
+      nome: 'ITAGEO / CAULIM',
       categoria: 'Ração Animal',
       descricao: 'Carga mineral inerte para indústrias de ração animal, com diferentes colorações e granulometrias',
       icon: Wheat,
@@ -83,16 +82,22 @@ export default function SecaoProdutos() {
           descricao: 'Filito branco para nutrição animal'
         },
         {
-          nome: 'Filito Bege',
+          nome: 'Filito Cinza',
           embalagem: 'Sacaria 20kg / BAG / Granel',
           tipo: 'Carga Mineral',
-          descricao: 'Filito bege para nutrição animal'
+          descricao: 'Filito cinza para nutrição animal'
         },
         {
           nome: 'Filito Creme',
           embalagem: 'Sacaria 20kg / BAG / Granel',
           tipo: 'Carga Mineral',
           descricao: 'Filito creme para nutrição animal'
+        },
+        {
+          nome: 'Caulim para Ração Animal',
+          embalagem: 'Sacaria 20kg / BAG / Granel',
+          tipo: 'Agente Tecnológico',
+          descricao: 'Caulim inerte usado como antiaglomerante e carreador de aditivos; melhora a fluidez e a peletização'
         }
       ],
       aplicacoes: [
@@ -104,9 +109,9 @@ export default function SecaoProdutos() {
         'Agente Aglutinante'
       ],
       caracteristicas: [
-        'Não é tóxico',
-        'Não é perecível',
-        'pH Neutro',
+        'Não tóxico',
+        'Não perecível',
+        'pH neutro',
         'Boa homogeneidade',
         'Baixa higroscopia',
         'Agente aglutinante veicular'
@@ -232,12 +237,12 @@ export default function SecaoProdutos() {
           ))}
         </div>
 
-        {/* Galeria de Produtos */}
+        {/* Galeria de Produtos (MATCON) */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.5 }}
-          className="bg-white rounded-xl shadow-lg p-8 mb-16"
+          className="bg-white rounded-xl shadow-lg p-6 mb-12"
         >
           <div className="text-center mb-8">
             <h3 className="text-3xl font-bold text-cinza-escuro mb-4">
@@ -248,23 +253,23 @@ export default function SecaoProdutos() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-center"
+              className="text-center flex flex-col items-center h-full"
             >
-              <div className="aspect-[3/4] mb-4 bg-gray-50 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+              <div className="h-80 md:h-96 w-full max-w-[360px] mb-4 rounded-xl overflow-visible mx-auto">
                 <img
                   src="/images/ligamil-20kg.png"
                   alt="LigaMil PLUS 20kg"
-                  className="w-full h-full object-contain p-4 hover:scale-105 transition-transform duration-300"
+                  className="w-full h-full object-cover p-0 hover:scale-105 transition-transform duration-300 drop-shadow-lg"
                 />
               </div>
-              <h4 className="text-xl font-bold text-cinza-escuro mb-2">LigaMil PLUS</h4>
-              <p className="text-blue-600 font-medium mb-2">Sacaria de 20kg</p>
-              <p className="text-sm text-gray-600">
+              <h4 className="text-xl font-bold text-cinza-escuro mb-2 min-h-[28px]">LigaMil PLUS</h4>
+              <p className="text-blue-600 font-medium mb-2 min-h-[22px]">Sacaria de 20kg</p>
+              <p className="text-sm text-gray-600 max-w-[320px]">
                 Plastificante aditivado para argamassa de assentamento
               </p>
             </motion.div>
@@ -273,18 +278,18 @@ export default function SecaoProdutos() {
               initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-center"
+              className="text-center flex flex-col items-center h-full"
             >
-              <div className="aspect-[3/4] mb-4 bg-gray-50 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+              <div className="h-72 md:h-80 w-full max-w-[320px] mb-4 rounded-xl overflow-visible mx-auto">
                 <img
                   src="/images/ligamil-max.png"
                   alt="LigaMil MAX 10kg"
-                  className="w-full h-full object-contain p-4 hover:scale-105 transition-transform duration-300"
+                  className="w-full h-full object-cover p-0 hover:scale-105 transition-transform duration-300 drop-shadow-lg"
                 />
               </div>
-              <h4 className="text-xl font-bold text-cinza-escuro mb-2">LigaMil MAX</h4>
-              <p className="text-blue-600 font-medium mb-2">Sacaria de 10kg</p>
-              <p className="text-sm text-gray-600">
+              <h4 className="text-xl font-bold text-cinza-escuro mb-2 min-h-[28px]">LigaMil MAX</h4>
+              <p className="text-blue-600 font-medium mb-2 min-h-[22px]">Sacaria de 10kg</p>
+              <p className="text-sm text-gray-600 max-w-[320px]">
                 Super concentrado, alta performance
               </p>
             </motion.div>
@@ -293,18 +298,18 @@ export default function SecaoProdutos() {
               initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="text-center"
+              className="text-center flex flex-col items-center h-full"
             >
-              <div className="aspect-[3/4] mb-4 bg-gray-50 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+              <div className="h-72 md:h-80 w-full max-w-[320px] mb-4 rounded-xl overflow-visible mx-auto">
                 <img
                   src="/images/calgel.png"
                   alt="CalGel 20kg"
-                  className="w-full h-full object-contain p-4 hover:scale-105 transition-transform duration-300"
+                  className="w-full h-full object-cover p-0 hover:scale-105 transition-transform duration-300 drop-shadow-lg"
                 />
               </div>
-              <h4 className="text-xl font-bold text-cinza-escuro mb-2">CalGel</h4>
-              <p className="text-blue-600 font-medium mb-2">Sacaria de 20kg</p>
-              <p className="text-sm text-gray-600">
+              <h4 className="text-xl font-bold text-cinza-escuro mb-2 min-h-[28px]">CalGel</h4>
+              <p className="text-blue-600 font-medium mb-2 min-h-[22px]">Sacaria de 20kg</p>
+              <p className="text-sm text-gray-600 max-w-[320px]">
                 Plastificante para argamassa à base de filito
               </p>
             </motion.div>
@@ -321,6 +326,65 @@ export default function SecaoProdutos() {
           </div>
         </motion.div>
 
+        {/* ITAGEO - Produtos para Ração Animal */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="bg-white rounded-xl shadow-lg p-6 mb-12"
+        >
+          <div className="text-center mb-8">
+            <h3 className="text-3xl font-bold text-cinza-escuro mb-4">
+              ITAGEO & CAULIM — Linha Nutrição Animal
+            </h3>
+            <p className="text-gray-600 max-w-4xl mx-auto">
+              Cargas minerais inertes e agentes tecnológicos para ração animal. Opções em filito branco, cinza e creme, além do caulim como antiaglomerante e carreador.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="text-center flex flex-col items-center h-full"
+            >
+              <div className="h-72 md:h-80 w-full max-w-[320px] mb-4 rounded-xl overflow-visible mx-auto">
+                <img
+                  src="/images/itageo.png"
+                  alt="ITAGEO – Produto Mineral Inerte"
+                  className="w-full h-full object-contain p-0 hover:scale-105 transition-transform duration-300 drop-shadow-lg"
+                />
+              </div>
+              <h4 className="text-xl font-bold text-cinza-escuro mb-2 min-h-[28px]">ITAGEO 20kg</h4>
+              <p className="text-green-600 font-medium mb-2 min-h-[22px]">Produto mineral inerte</p>
+              <p className="text-sm text-gray-600 max-w-[520px]">
+                Carga mineral para formulações de ração. Disponível em diferentes granulometrias.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="text-center flex flex-col items-center h-full"
+            >
+              <div className="h-72 md:h-80 w-full max-w-[320px] mb-4 rounded-xl overflow-visible mx-auto">
+                <img
+                  src="/images/caulim.png"
+                  alt="Caulim — Big Bag"
+                  className="w-full h-full object-contain p-0 hover:scale-105 transition-transform duration-300 drop-shadow-lg"
+                />
+              </div>
+              <h4 className="text-xl font-bold text-cinza-escuro mb-2 min-h-[28px]">Caulim para Ração Animal</h4>
+              <p className="text-green-600 font-medium mb-2 min-h-[22px]">Agente tecnológico (antiaglomerante / carreador)</p>
+              <p className="text-sm text-gray-600 max-w-[520px]">
+                Inerte e de pH próximo ao neutro. Favorece a fluidez, reduz empedramento e contribui para a peletização.
+              </p>
+            </motion.div>
+          </div>
+        </motion.div>
+
         {/* Filito - Produto Base */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -333,7 +397,7 @@ export default function SecaoProdutos() {
               Filito - Nosso Produto Base
             </h3>
             <p className="text-gray-600 max-w-4xl mx-auto">
-              Também conhecido como Silicato de Alumínio, "In natura" apresenta diversas colorações: 
+              Também conhecido como Silicato de Alumínio, "in natura" apresenta diversas colorações: 
               branco, creme, rosado, roxo, cinza. Ao passar pelos diversos processos de extração, 
               beneficiamento e finalmente em granaturas de pó, o material ganha infinitas utilidades.
             </p>
