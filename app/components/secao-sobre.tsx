@@ -95,13 +95,13 @@ export default function SecaoSobre() {
                 Operamos com duas unidades fabris e somos atualmente listados entre as 
                 maiores mineradoras do Brasil, sendo a maior produtora e detentora da 
                 maior jazida de filito do país, com um volume extraído de aproximadamente 
-                350.000 toneladas por ano, mais 200.000 toneladas por ano de material estéril.
+                300.000 toneladas por ano, mais 200.000 toneladas por ano de material estéril.
               </p>
               <div className="bg-white rounded-lg p-6 shadow-lg">
                 <h4 className="font-semibold text-cinza-escuro mb-4">Nossos Números</h4>
                 <div className="grid grid-cols-2 gap-4 text-sm">
                   <div>
-                    <span className="text-vermelho-principal font-bold">350k</span>
+                    <span className="text-vermelho-principal font-bold">300k</span>
                     <p className="text-gray-600">Toneladas/Ano</p>
                   </div>
                   <div>
@@ -148,3 +148,5 @@ export default function SecaoSobre() {
     </section>
   )
 }
+
+
